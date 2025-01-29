@@ -1,0 +1,269 @@
+:root
+/*Colors*/
+{--background-color: #ffffff;
+  --color-blue: #0508D0;
+  --pink-color: #FCC1BD;
+  --red-color: #F00003;
+  --brown-color: #3e2a29;
+  --nav-grey-color: rgb(65, 65, 65);
+  --text-color: rgb(34, 34, 34);
+/*Fonts*/
+--pixel-font: "Pixelify";
+--modern-font: "Quicksand";
+--vintage-font: "Shrikhand";
+}
+
+body{
+  background-color: #F6F3F2, transparent 50%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*HEADER*/
+
+header{
+  background-color: #ffffff;
+  height: 100px;
+  width: auto;
+}
+.container-ul {
+  display: flex;
+  float: inline-end;
+  width: 400px;
+  border: 10px;
+  padding: 8px;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  font-family: "Quicksand";
+  font-size: 1rem;
+}
+ul li a:hover{
+  transform:scale(2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
+}
+
+ul li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#ff0808;
+  transition:0.5s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+ul li a:hover:before{
+  transition:transform 0.5s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+
+a{
+  text-decoration-line: none;
+  color:#3e2a29;
+}
+
+#logo {
+  position: relative;
+  height: 120px;
+  width: 300px;
+  border: 0px;
+}
+
+/*MAIN*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left; 
+  margin-left: 250px;
+  margin-top: 120px;
+}
+
+  .container-one{
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  padding: 0;
+  gap: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  overflow: hidden; 
+  border-right: .07em solid #F00003; 
+  white-space: nowrap; 
+  margin: 0; 
+  letter-spacing: .20em; 
+  animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F00003; }
+  }
+
+.container-two{
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  padding: 0;
+  gap: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-right: .15em solid #F00003; 
+  white-space: nowrap; 
+  margin: 0;
+  letter-spacing: .10em; 
+  animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F00003; }
+  }
+
+.container-three{
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  padding: 0;
+  gap: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  overflow: hidden; 
+  border-right: .10em solid #F00003; 
+  white-space: nowrap; 
+  margin: 0; 
+  letter-spacing: .10em;
+  animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F00003; }
+  }
+
+h1,h2,h3{
+  display: flex;
+  font-family: "Jersey 10";
+  color: #0508D0;
+  margin: 0;
+  border:0;
+  padding:0;
+}
+h1{
+  font-size: 65px;
+}
+
+h2, h3{
+font-size: 45px;
+}
+p {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Quicksand";
+  font-size: 22px;
+  
+}
+ 
+.image {
+  display: flex;
+  position: absolute;
+  justify-content: end;
+  align-items: baseline;
+  top: 25%;
+  right: 10%; 
+}
+
+/*FOOTER*/
+footer{
+  display:flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+
+/*MEDIA QUERY*/
+@media all and (max-width: 768px) {
+  *{
+    display: grid;
+    position:unset;
+    grid-template-columns: auto;
+    justify-content: left;
+    text-align: left;
+    border-left: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .image {
+    display:grid;
+    position:inherit;
+  }
+.container-one, .container-three, .container-two{
+  display: flex;
+  animation: none;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+  h1, h2, h3{
+    font-size: 25px;
+
+  }
+  p {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    font-size: 18px;
+  }
+}
